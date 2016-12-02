@@ -1,0 +1,15 @@
+#Compiled python modules
+*.pyc
+
+# Setuptools distribution
+**/dist
+
+#Python egg metadata
+/*.egg-info
+
+#Swap files
+*.swp
+
+stats.py
+
+*.eggs

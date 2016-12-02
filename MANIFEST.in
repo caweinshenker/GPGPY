@@ -1,0 +1,2 @@
+include README.md
+recursive-include  GPGPY/setup/test/fixtures/ *
