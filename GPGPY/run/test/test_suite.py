@@ -19,3 +19,43 @@
 #LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
+
+
+from nose.tools import assert_true, assert_false, assert_raises
+from ....config.config import Config
+
+
+
+
+config_filename = os.path.dirname(os.path.abspath(__file__)) + "/fixtures/gpgpusim.config"
+
+class TestSuite(self):
+
+	def setup(self): 
+		config = Config()
+		config.load(config_filename)
+		self.suite = Suite("Demo", config)	
+		self.bench1 = Benchmark(name="bench", executable_path="executable_path", config=c)
+		self.bench2 = Benchmark(name="bench2", executable_path="executable_path2", config=c)
+
+
+
+	def teardown(self):
+		pass	
+
+
+
+	def test__init__(self):
+		assert_true(self.suite._benchmarks == [])
+	
+
+	def test__str__(self):
+		assert_true(str(self.suite) == "Demo")
+
+
+	def test_add_benchmark(self):
+		self.suite.add_benchmarks(bench1, bench2)
+					
+
+
+			
